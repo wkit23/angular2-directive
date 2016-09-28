@@ -28,3 +28,11 @@
 <p highlight>Highlight me!</p>
 <p highlight>Highlight me!</p>
 <p highlight>Highlight me!</p>
+
+
+<app-output [input]="'test'" (outputBack)="onGetBack($event)"></app-output>
+
+<div>
+  Message from component:
+  <pre>{{ message }}</pre>
+</div>

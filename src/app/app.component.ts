@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   colorOptions = ['black', 'red', 'green'];
+
+  message:string;
+
+  onGetBack(event) {
+    this.message = event;
+  }
 }

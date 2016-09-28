@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-output',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./output.component.css']
 })
 export class OutputComponent implements OnInit {
+  @Input()
+  input:string
 
-  constructor() { }
+  @Output()
+  outputBack:EventEmitter<string>;
+
+  constructor() {
+    this.outputBack = new EventEmitter<string>();
+  }
 
   ngOnInit() {
   }
 
+  sendBack():void {
+    this.outputBack.emit(this.input);
+  }
 }
