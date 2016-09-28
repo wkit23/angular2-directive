@@ -1,0 +1,30 @@
+<h1>
+  {{title}}
+</h1>
+
+<input type="text" [(ngModel)]="color" />
+<div [ngStyle]="{'backgroundColor':color}" >
+  Hahahahahahahaha
+</div>
+
+<br/>
+<select [(ngModel)]="color">
+  <option *ngFor="let item of colorOptions" value="{{ item }}">{{ item }}</option>
+</select>
+
+<p [highlight]="'yellow'">Highlight me!</p>
+<p [highlight]="'blue'">Highlight me!</p>
+<p [highlight]="'black'">Highlight me!</p>
+<p [highlight]="color">Highlight me!</p>
+<p [highlight]="'pink'">Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
+<p highlight>Highlight me!</p>
